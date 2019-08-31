@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Landing from './views/Landing.vue'
 
 Vue.use(Router)
 
@@ -9,8 +8,10 @@ export default new Router({
     base: process.env.BASE_URL,
     routes: [{
             path: '/',
-            name: 'landing',
-            component: Landing
+            name: 'home',
+            // 懒加载
+            component: () =>
+                import ('./views/Home.vue')
         },
         {
             path: '/login',
@@ -25,6 +26,31 @@ export default new Router({
             // 懒加载
             component: () =>
                 import ('./views/Register.vue')
+        },
+        {
+            path: '/menu',
+            name: 'menu',
+            // 懒加载
+            component: () =>
+                import ('./views/Pizza.vue')
+        },
+        {
+            path: '/manage',
+            name: 'manage',
+            // 懒加载
+            component: () =>
+                import ('./views/Manage.vue')
+        },
+        {
+            path: '/about',
+            name: 'about',
+            // 懒加载
+            component: () =>
+                import ('./views/About.vue')
+        },
+        {
+            path: '*',
+            redirect: "/"
         },
     ]
 })

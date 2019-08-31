@@ -22,7 +22,7 @@ export default {
 
 <style>
 #app {
-  width: 85%;
+  width: 88%;
   margin: 0 auto;
 }
 </style>
