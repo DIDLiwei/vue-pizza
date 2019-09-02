@@ -57,6 +57,13 @@ export default {
 </script>
 
 <style scoped>
+ul {
+  padding-inline-start: 0px;
+}
+.about-content-b a {
+  text-decoration: none;
+  padding-left: 10px;
+}
 .about {
   max-width: 1000px;
   margin: 0 auto;

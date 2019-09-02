@@ -27,9 +27,7 @@
       </li>
     </ul>
     <ul class="nav-lr" v-if="isLogin && user != null">
-      <li>
-        <img :src="user.avatar" />
-      </li>
+      <li>{{user.email}}</li>
       <li>
         <a @click.prevent="logout">注销</a>
       </li>

@@ -34,7 +34,7 @@ export default {
           // const { token } = res.data;
           // localStorage.setItem("jwtToken", token);
           // const decoded = jwt_decode(token);
-          // this.$store.dispatch("setUserAsync", decoded);
+          this.$store.dispatch("setUserAsync", this.user);
           // this.$store.dispatch("setIsLoginAsync", !this.isEmpty(decoded));
           this.$store.dispatch("setIsLoginAsync", true);
           this.errors = {};
